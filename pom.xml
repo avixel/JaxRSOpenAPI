@@ -8,6 +8,13 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>jaxrs-example</name>
 	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
 	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -64,7 +71,7 @@
 		</dependency>
 
 
-	<!-- OpenAPI-->
+		<!-- OpenAPI -->
 		<dependency>
 			<groupId>io.swagger.core.v3</groupId>
 			<artifactId>swagger-jaxrs2</artifactId>
@@ -80,6 +87,10 @@
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7.1</version>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
